@@ -45,7 +45,10 @@ DEBUG=True
 ENVIRONMENT=development
 ```
 
-**重要**: `your-actual-api-key-here`の部分を、実際のGemini APIキーに置き換えてください。
+**重要**: 
+- `your-actual-api-key-here`の部分を、実際のGemini APIキーに置き換えてください
+- **セキュリティ警告**: `.env`ファイルは絶対にGitにコミットしないでください
+- サンプルファイルとして`env.example`を参照してください
 
 ### 3. Gemini APIキーの取得
 
@@ -128,6 +131,19 @@ cd diary-viewer
 2. prompts.csv → ai-requests → results.csv
 3. results.csv → diary-viewer → Web表示
 ```
+
+## 🔒 セキュリティ
+
+### 重要なセキュリティ警告
+- **APIキーは絶対にGitにコミットしないでください**
+- `.env`ファイルは`.gitignore`で除外されています
+- サンプルファイルとして`env.example`を使用してください
+- 漏洩したAPIキーは直ちに無効化してください
+
+### 環境変数の管理
+- 本番環境では環境変数管理サービスを使用
+- 開発環境では`.env`ファイルを使用（Gitにコミットしない）
+- APIキーの定期的なローテーションを推奨
 
 ## ⚠️ 注意事項
 
