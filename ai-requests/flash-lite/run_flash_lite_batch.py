@@ -15,7 +15,8 @@ import google.generativeai as genai
 # プロジェクトルートのパスを追加して環境変数モジュールをインポート
 project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append(project_root)
-from ai_requests.common.env_loader import get_gemini_api_key, load_environment
+sys.path.append(os.path.join(project_root, 'ai-requests', 'common'))
+from env_loader import get_gemini_api_key, load_environment
 
 # --- スクリプト自身の場所を基準にファイルのパスを自動設定 ---
 script_dir = os.path.dirname(os.path.abspath(__file__))
